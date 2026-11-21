@@ -1,0 +1,23 @@
+.footer {
+  border-top: 1px solid var(--hairline);
+  padding: 28px 0;
+  margin-top: 40px;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer__text {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 52ch;
+}
+
+.footer__text--muted {
+  opacity: 0.7;
+}

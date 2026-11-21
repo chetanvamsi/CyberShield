@@ -1,0 +1,45 @@
+{
+  "is_demo": true,
+  "note": "DEMO DATA. These numbers are illustrative placeholders only -- no model has been trained on a real dataset yet. Run model/train_model.py on a labeled dataset to replace this file with real evaluation results.",
+  "dataset_size": 0,
+  "test_size": 0.2,
+  "deployed_model": "Logistic Regression",
+  "models": {
+    "Logistic Regression": {
+      "accuracy": 0.87,
+      "precision": 0.85,
+      "recall": 0.83,
+      "f1_score": 0.84,
+      "confusion_matrix": [[420, 45], [52, 283]]
+    },
+    "Naive Bayes": {
+      "accuracy": 0.81,
+      "precision": 0.78,
+      "recall": 0.76,
+      "f1_score": 0.77,
+      "confusion_matrix": [[400, 65], [68, 267]]
+    },
+    "Linear SVM": {
+      "accuracy": 0.88,
+      "precision": 0.86,
+      "recall": 0.85,
+      "f1_score": 0.855,
+      "confusion_matrix": [[425, 40], [46, 289]]
+    },
+    "Random Forest": {
+      "accuracy": 0.85,
+      "precision": 0.83,
+      "recall": 0.80,
+      "f1_score": 0.815,
+      "confusion_matrix": [[415, 50], [63, 272]]
+    },
+    "LSTM / BERT (planned)": {
+      "accuracy": null,
+      "precision": null,
+      "recall": null,
+      "f1_score": null,
+      "confusion_matrix": null,
+      "status": "Not yet trained. Included as a placeholder row for the planned deep-learning comparison."
+    }
+  }
+}

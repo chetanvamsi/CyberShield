@@ -1,0 +1,163 @@
+/* ============================================================
+   CyberShield design tokens
+   Palette: cool paper background, deep pine-teal for trust/
+   protection, muted brick for harm flags, muted forest for
+   safe verdicts. Fraunces (serif, display) + Inter (UI/body) +
+   IBM Plex Mono reserved for numeric data only.
+   ============================================================ */
+
+:root {
+  --paper: #F6F7F4;
+  --paper-raised: #FFFFFF;
+  --ink: #14201C;
+  --ink-soft: #46524C;
+  --hairline: #D8DED8;
+
+  --shield: #1F6F63;
+  --shield-dark: #164F46;
+  --shield-tint: #E4F0EC;
+
+  --alert: #B5402A;
+  --alert-tint: #F6E6E1;
+
+  --safe: #3F7A4E;
+  --safe-tint: #E6F0E6;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --max-width: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0 0 0.5em 0;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 500; }
+h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+h3 { font-size: 1.3rem; }
+
+p {
+  margin: 0 0 1em 0;
+  color: var(--ink-soft);
+  max-width: 68ch;
+}
+
+a {
+  color: var(--shield-dark);
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--shield);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section--tight {
+  padding: 48px 0;
+}
+
+.hairline {
+  border: 1px solid var(--hairline);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 120ms ease, background 150ms ease, border-color 150ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--shield);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--shield-dark);
+}
+
+.btn-primary:disabled {
+  background: var(--hairline);
+  color: var(--ink-soft);
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.eyebrow {
+  font-size: 0.82rem;
+  color: var(--shield-dark);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}

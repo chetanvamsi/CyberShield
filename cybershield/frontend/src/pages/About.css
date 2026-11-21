@@ -1,0 +1,28 @@
+.about__inner {
+  max-width: 760px;
+}
+
+.about__block {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--hairline);
+}
+
+.about__block h2 {
+  margin-bottom: 14px;
+}
+
+.about__block h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: var(--shield-dark);
+}
+
+.about__block ul {
+  padding-left: 20px;
+  color: var(--ink-soft);
+}
+
+.about__block li {
+  margin-bottom: 8px;
+}
